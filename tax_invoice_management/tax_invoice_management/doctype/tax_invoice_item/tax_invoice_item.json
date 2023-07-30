@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2023-07-23 11:25:19.442968",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_tax",
+  "item_tax_desc",
+  "item_spec",
+  "qty",
+  "uom",
+  "price",
+  "amount",
+  "tax_rate",
+  "tax_amount"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "item_tax",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "\u5e94\u7a0e\u9879\u76ee",
+   "options": "Item"
+  },
+  {
+   "columns": 1,
+   "fetch_from": "item_tax.item_name",
+   "fieldname": "item_tax_desc",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "\u5e94\u7a0e\u9879\u76ee\u540d\u79f0"
+  },
+  {
+   "columns": 1,
+   "fieldname": "item_spec",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "\u89c4\u683c\u578b\u53f7"
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "\u6570\u91cf"
+  },
+  {
+   "columns": 1,
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "\u5355\u4f4d",
+   "options": "UOM"
+  },
+  {
+   "columns": 1,
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "\u5355\u4ef7"
+  },
+  {
+   "columns": 1,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "\u91d1\u989d"
+  },
+  {
+   "columns": 1,
+   "fieldname": "tax_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "\u7a0e\u7387"
+  },
+  {
+   "columns": 2,
+   "fieldname": "tax_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "\u7a0e\u989d"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-07-23 22:28:24.750822",
+ "modified_by": "Administrator",
+ "module": "Tax Invoice Management",
+ "name": "Tax Invoice Item",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

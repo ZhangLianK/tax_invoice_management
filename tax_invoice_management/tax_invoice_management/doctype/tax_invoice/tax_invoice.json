@@ -1,0 +1,295 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-07-23 11:26:03.376726",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "column_break_bbon0",
+  "qr",
+  "section_break_5xv4a",
+  "invoice_code",
+  "invoice_id",
+  "date",
+  "column_break_g5hjf",
+  "tax_category",
+  "invoice_type",
+  "column_break_sstx3",
+  "invoice_jz",
+  "invoice_dk",
+  "invoice_fp",
+  "invoice_checked",
+  "invoice_opening",
+  "\u8d2d\u9500\u65b9\u4fe1\u606f_section",
+  "party_type_purchase",
+  "party_purchase",
+  "tax_id_purchase",
+  "column_break_rjoqo",
+  "party_type_sales",
+  "party_sales",
+  "tax_id_sales",
+  "item_tax_info",
+  "tax_items",
+  "\u6c47\u603b_section",
+  "net_total_amount",
+  "column_break_c82rb",
+  "grand_total",
+  "column_break_pe53w",
+  "tax_total",
+  "\u53c2\u8003\u4fe1\u606f_tab",
+  "reference",
+  "reference_doc_type",
+  "reference_doc_name",
+  "reference_doc_item",
+  "naming_series",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice_id",
+   "fieldtype": "Data",
+   "label": "\u53d1\u7968\u53f7\u7801"
+  },
+  {
+   "fieldname": "tax_category",
+   "fieldtype": "Link",
+   "label": "\u7a0e\u79cd",
+   "options": "Tax Category"
+  },
+  {
+   "fieldname": "invoice_type",
+   "fieldtype": "Select",
+   "label": "\u53d1\u7968\u7c7b\u578b",
+   "options": "\u8fdb\u9879\u53d1\u7968\n\u9500\u9879\u53d1\u7968\n\u5176\u4ed6"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "\u5f00\u7968\u65e5\u671f"
+  },
+  {
+   "default": "0",
+   "fieldname": "invoice_jz",
+   "fieldtype": "Check",
+   "label": "\u8bb0\u8d26\u8054"
+  },
+  {
+   "default": "0",
+   "fieldname": "invoice_dk",
+   "fieldtype": "Check",
+   "label": "\u62b5\u6263\u8054"
+  },
+  {
+   "default": "0",
+   "fieldname": "invoice_fp",
+   "fieldtype": "Check",
+   "label": "\u53d1\u7968\u8054"
+  },
+  {
+   "fieldname": "party_type_purchase",
+   "fieldtype": "Link",
+   "label": "\u8d2d\u4e70\u65b9\u7c7b\u522b",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "party_purchase",
+   "fieldtype": "Dynamic Link",
+   "label": "\u8d2d\u4e70\u65b9",
+   "options": "party_type_purchase"
+  },
+  {
+   "fieldname": "tax_id_purchase",
+   "fieldtype": "Data",
+   "label": "\u7eb3\u7a0e\u4eba\u8bc6\u522b\u53f7"
+  },
+  {
+   "fieldname": "item_tax_info",
+   "fieldtype": "Section Break",
+   "label": "\u5e94\u7a0e\u9879\u76ee\u4fe1\u606f"
+  },
+  {
+   "fieldname": "tax_items",
+   "fieldtype": "Table",
+   "label": "\u5e94\u7a0e\u9879\u76ee",
+   "options": "Tax Invoice Item"
+  },
+  {
+   "fieldname": "party_type_sales",
+   "fieldtype": "Link",
+   "label": "\u9500\u552e\u65b9\u7c7b\u522b",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "party_sales",
+   "fieldtype": "Dynamic Link",
+   "label": "\u9500\u552e\u65b9",
+   "options": "party_type_sales"
+  },
+  {
+   "fieldname": "tax_id_sales",
+   "fieldtype": "Data",
+   "label": "\u7eb3\u7a0e\u4eba\u8bc6\u522b\u53f7"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "\u7f16\u7801\u89c4\u5219",
+   "options": "TAXINV-.YYYY.MM.-"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Tax Invoice",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_g5hjf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_sstx3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_rjoqo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "\u8d2d\u9500\u65b9\u4fe1\u606f_section",
+   "fieldtype": "Section Break",
+   "label": "\u8d2d/\u9500\u65b9\u4fe1\u606f"
+  },
+  {
+   "fieldname": "qr",
+   "fieldtype": "Data",
+   "label": "\u626b\u63cf\u53d1\u7968",
+   "options": "Barcode"
+  },
+  {
+   "fieldname": "section_break_5xv4a",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "invoice_code",
+   "fieldtype": "Data",
+   "label": "\u53d1\u7968\u4ee3\u7801"
+  },
+  {
+   "fieldname": "\u6c47\u603b_section",
+   "fieldtype": "Section Break",
+   "label": "\u6c47\u603b"
+  },
+  {
+   "fieldname": "net_total_amount",
+   "fieldtype": "Currency",
+   "label": "\u4e0d\u542b\u7a0e\u91d1\u989d",
+   "options": "currency"
+  },
+  {
+   "fieldname": "column_break_bbon0",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "\u542b\u7a0e\u91d1\u989d"
+  },
+  {
+   "fieldname": "tax_total",
+   "fieldtype": "Currency",
+   "label": "\u7a0e\u989d"
+  },
+  {
+   "fieldname": "\u53c2\u8003\u4fe1\u606f_tab",
+   "fieldtype": "Tab Break",
+   "label": "\u53c2\u8003\u4fe1\u606f"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "\u516c\u53f8",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_c82rb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pe53w",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reference_doc_type",
+   "fieldtype": "Link",
+   "label": "\u5355\u636e\u7c7b\u578b",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "reference_doc_name",
+   "fieldtype": "Dynamic Link",
+   "label": "\u8d39\u7528\u6e05\u5355\u53f7",
+   "options": "reference_doc_type"
+  },
+  {
+   "fieldname": "reference_doc_item",
+   "fieldtype": "Data",
+   "label": "\u8d39\u7528\u6e05\u5355\u660e\u7ec6"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "depends_on": "eval: doc.invoice_type == '\u8fdb\u9879\u53d1\u7968'",
+   "fieldname": "invoice_checked",
+   "fieldtype": "Check",
+   "label": "\u5df2\u52fe\u9009\u786e\u8ba4"
+  },
+  {
+   "default": "0",
+   "fieldname": "invoice_opening",
+   "fieldtype": "Check",
+   "label": "\u4e0a\u7ebf\u521d\u59cb\u53d1\u7968"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Table",
+   "label": "\u53c2\u8003",
+   "options": "Tax Invoice Reference"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-07-30 22:48:00.559416",
+ "modified_by": "Administrator",
+ "module": "Tax Invoice Management",
+ "name": "Tax Invoice",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_views": 1
+}
