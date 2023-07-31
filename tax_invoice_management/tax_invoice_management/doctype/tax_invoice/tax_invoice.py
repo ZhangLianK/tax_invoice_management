@@ -64,9 +64,6 @@ def make_tax_invoice_from_sales_invoice(source_name):
 	tax_invoice.party_sales = source_doc.company
 	tax_invoice.tax_id_sales = frappe.db.get_value("Company", source_doc.company, "tax_id")
 
-	tax_invoice.reference_doc_type = 'Sales Invoice'
-	tax_invoice.reference_doc_name = source_doc.name
-
 	#get all return invoice doc against source_doc
 	invoices_names = frappe.get_all("Sales Invoice", filters={"return_against": source_doc.name})
 	invoices = []
@@ -138,9 +135,6 @@ def make_tax_invoice_from_purchase_invoice(source_name):
 	tax_invoice.party_type_sales = 'Supplier'
 	tax_invoice.party_sales = source_doc.supplier
 	tax_invoice.tax_id_sales = frappe.db.get_value("Supplier", source_doc.supplier, "tax_id")
-
-	tax_invoice.reference_doc_type = 'Purchase Invoice'
-	tax_invoice.reference_doc_name = source_doc.name
 
 
 	for source_item in source_doc.items:

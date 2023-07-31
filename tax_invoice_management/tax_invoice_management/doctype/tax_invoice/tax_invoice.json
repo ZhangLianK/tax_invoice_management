@@ -42,9 +42,6 @@
   "tax_total",
   "\u53c2\u8003\u4fe1\u606f_tab",
   "reference",
-  "reference_doc_type",
-  "reference_doc_name",
-  "reference_doc_item",
   "naming_series",
   "amended_from"
  ],
@@ -226,23 +223,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "reference_doc_type",
-   "fieldtype": "Link",
-   "label": "\u5355\u636e\u7c7b\u578b",
-   "options": "DocType"
-  },
-  {
-   "fieldname": "reference_doc_name",
-   "fieldtype": "Dynamic Link",
-   "label": "\u8d39\u7528\u6e05\u5355\u53f7",
-   "options": "reference_doc_type"
-  },
-  {
-   "fieldname": "reference_doc_item",
-   "fieldtype": "Data",
-   "label": "\u8d39\u7528\u6e05\u5355\u660e\u7ec6"
-  },
-  {
    "allow_on_submit": 1,
    "default": "0",
    "depends_on": "eval: doc.invoice_type == '\u8fdb\u9879\u53d1\u7968'",
@@ -266,7 +246,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-30 22:48:00.559416",
+ "modified": "2023-07-31 23:18:06.939301",
  "modified_by": "Administrator",
  "module": "Tax Invoice Management",
  "name": "Tax Invoice",
